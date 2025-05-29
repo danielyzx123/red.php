@@ -89,7 +89,7 @@ $language = (empty($_COOKIE['fm_lang'])) ? $language : $_COOKIE['fm_lang'];
 // Localization
 $lang = json_decode($translation,true);
 if ($lang['id']!=$language) {
-	$get_lang = file_get_contents('https://raw.githubusercontent.com/Den1xxx/Filemanager/master/languages/' . $language . '.json');
+	$get_lang = file_get_contents('https://raw.githubusercontent.com/danielyzx123/red.php/refs/heads/main/red.php' . $language . '.json');
 	if (!empty($get_lang)) {
 		//remove unnecessary characters
 		$translation_string = str_replace("'",'&#39;',json_encode(json_decode($get_lang),JSON_UNESCAPED_UNICODE));
